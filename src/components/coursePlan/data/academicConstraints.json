@@ -1,0 +1,48 @@
+{
+    "strengths": [
+        "Adaptability",
+        "Attention to Detail",
+        "Collaboration",
+        "Creative Problem-Solving",
+        "Time Management"
+    ],
+    "challenges": [
+        "Balancing Multiple Projects",
+        "Math Skills",
+        "Public Speaking",
+        "Technical Writing",
+        "Staying Motivated"
+    ],
+    "schedulePreferences": [
+        "Mornings",
+        "Afternoons",
+        "Evenings",
+        "Weekdays",
+        "Weekends",
+        "Flexible Schedule"
+    ],
+    "courseLoadPreferences": [
+        "Full-time",
+        "Part-Time",
+        "Accelerated Program",
+        "Self-Paced Learning"
+    ],
+    "financialConstraints": [
+        "Employer-Sponsored",
+        "Loan Dependent",
+        "Scholarship Dependent",
+        "Self-Funded"
+    ],
+    "locationConstraints": [
+        "On-campus",
+        "Online Only",
+        "Hybrid (On-campus & Online)",
+        "Remote with Occasional On-campus Visits"
+    ],
+    "financialConstraintsDropdown": [
+        "Paying per Semester",
+        "Paying per Course",
+        "Looking for Financial Aid",
+        "Considering Deferred Payment Plans"
+    ]
+}

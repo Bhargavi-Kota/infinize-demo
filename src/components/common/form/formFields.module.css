@@ -1,0 +1,21 @@
+.infinize__selectlanMenuItem {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.infinize__selectlanMenuItemSelected {
+    background-color: #bbdefb;
+}
+
+.infinize__selectlanMenuItem:hover {
+    background-color: #90caf9;
+}
+.infinize__textArea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #d8e6ec;
+    padding-right: 50px;
+    outline: none;
+}

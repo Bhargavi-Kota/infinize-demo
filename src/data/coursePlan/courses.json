@@ -1,0 +1,34 @@
+{
+    "Courses": [
+        {
+            "courseTitle": "Death Penalty",
+            "courseNumber": "321",
+            "subject": "CRJS",
+            "credits": "3"
+        },
+        {
+            "courseTitle": "LGBTQ People, Crime, and Justice",
+            "courseNumber": "326",
+            "subject": "CRJS",
+            "credits": "3"
+        },
+        {
+            "courseTitle": "White-Collar Crime",
+            "courseNumber": "340",
+            "subject": "CRJS",
+            "credits": "3"
+        },
+        {
+            "courseTitle": "Crime and the Community",
+            "courseNumber": "355",
+            "subject": "CRJS",
+            "credits": "3"
+        },
+        {
+            "courseTitle": "Crime Prevention",
+            "courseNumber": "375",
+            "subject": "CRJS",
+            "credits": "3"
+        }
+    ]
+}

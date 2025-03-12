@@ -1,0 +1,32 @@
+{
+    "studentNudges": [
+        {
+            "type": "nudge",
+            "title": "Student Missed 5 classess",
+            "date": "03/10/2025",
+            "description": "The student has been absent for 5 consecutive lectures in CRJS 105 - Corrections & Society. Attendance is below the required threshold of 75%...",
+            "data": ""
+        },
+        {
+            "type": "alert",
+            "title": "Student Achieved High Distinction",
+            "date": "03/10/2025",
+            "description": "The student scored 90% in The Criminal Justice System (CRJS 125), placing them in the top 5% of the class. ",
+            "data": ""
+        },
+        {
+            "type": "nudge",
+            "title": "Upcoming Course Registration Demo",
+            "date": "02/10/2025",
+            "description": "The student has not yet registered for courses for the Fall 2025 semester. The registration deadline is approaching, and failure to enroll may result in...",
+            "data": "Nudged on: February 11, 2025."
+        },
+        {
+            "type": "alert",
+            "title": "Upcoming Course Registration Demo",
+            "date": "03/10/2025",
+            "description": "The student has not yet registered for courses for the Fall 2025 semester. The registration deadline is approaching, and failure to enroll.",
+            "data": "Sent kudos on: March 15, 2025."
+        }
+    ]
+}

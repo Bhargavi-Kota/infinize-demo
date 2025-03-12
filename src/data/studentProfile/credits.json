@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "name": "Credits Obtained",
+            "value": 62,
+            "color": "#1C71B5"
+        },
+        {
+            "name": "Credits Enrolled",
+            "value": 15,
+            "color": "#FABF1F"
+        },
+        {
+            "name": "Remaining Credits",
+            "value": 43,
+            "color": "#5CB3F9"
+        }
+    ],
+    "totalCredits": 120
+}

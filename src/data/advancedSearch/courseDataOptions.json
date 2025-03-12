@@ -1,0 +1,55 @@
+{
+    "Courses": [
+        {
+            "courseTitle": "Calculus I",
+            "courseNumber": "101",
+            "subject": "Mathematics"
+        },
+        {
+            "courseTitle": "Physics II",
+            "courseNumber": "202",
+            "subject": "Physics"
+        },
+        {
+            "courseTitle": "World History",
+            "courseNumber": "303",
+            "subject": "History"
+        },
+        {
+            "courseTitle": "Organic Chemistry",
+            "courseNumber": "404",
+            "subject": "Chemistry"
+        },
+        {
+            "courseTitle": "Computer Science",
+            "courseNumber": "100",
+            "subject": "AAST"
+        },
+        {
+            "courseTitle": "Computer Science AAS",
+            "courseNumber": "201",
+            "subject": "AAS"
+        }
+    ],
+    "crn": [
+        "12345",
+        "67890",
+        "11223"
+    ],
+    "gradeFilter": [],
+    "grade": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F"
+    ],
+    "semesterRange": [
+        "Fall 2020 - Spring 2021",
+        "Fall 2021 - Spring 2022"
+    ],
+    "semester": [
+        "Fall",
+        "Spring"
+    ]
+}

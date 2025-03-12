@@ -1,0 +1,134 @@
+{
+    "currentEnrollment": [
+        {
+            "id": 1,
+            "crn": 78901,
+            "subject": "CRJS",
+            "courseNumber": 123,
+            "title": "Introduction to Criminology",
+            "instructor": "John Mathews",
+            "courseCredits": "2",
+            "schedule": "MWF 10:00 AM - 11:30 AM"
+        },
+        {
+            "id": 2,
+            "crn": 78902,
+            "subject": "CRJS",
+            "courseNumber": 125,
+            "title": "The Criminal Justice System",
+            "instructor": "Emily Carter",
+            "courseCredits": "3",
+            "schedule": [
+                "M 10:00 AM - 11:30 AM",
+                "W 10:00 AM - 11:30 AM"
+            ]
+        },
+        {
+            "id": 3,
+            "crn": 78903,
+            "subject": "CRJS",
+            "courseNumber": 105,
+            "title": "Corrections & Society",
+            "instructor": "Mark Robinson",
+            "courseCredits": "3",
+            "schedule": "MWF 10:00 AM - 11:30 AM"
+        },
+        {
+            "id": 4,
+            "crn": 78904,
+            "subject": "CRJS",
+            "courseNumber": 287,
+            "title": "Law Enforcement & Society",
+            "instructor": "Sarah Bennett",
+            "courseCredits": "3",
+            "schedule": "MWF 10:00 AM - 11:30 AM"
+        },
+        {
+            "id": 5,
+            "crn": 78905,
+            "subject": "ENGL",
+            "courseNumber": 342,
+            "title": "English Composition II",
+            "instructor": "William Johnson",
+            "courseCredits": "2",
+            "schedule": "MWF 10:00 AM - 11:30 AM"
+        },
+        {
+            "id": 6,
+            "crn": 78906,
+            "subject": "SOC",
+            "courseNumber": 354,
+            "title": "Introduction to Sociology",
+            "instructor": "Lisa Anderson",
+            "courseCredits": "2",
+            "schedule": "MWF 10:00 AM - 11:30 AM"
+        }
+    ],
+    "holds": [
+        {
+            "id": 1,
+            "title": "Accounts Receivable Hold",
+            "holdReason": "Unpaid tuition",
+            "from": "02/15/2024",
+            "to": "12/30/2029"
+        }
+    ],
+    "creditsCompleted": [
+        {
+            "id": 1,
+            "semester": "Fall 2024",
+            "earned": 15,
+            "completed": 62
+        },
+        {
+            "id": 2,
+            "semester": "Summer 2024",
+            "earned": 6,
+            "completed": 47
+        },
+        {
+            "id": 3,
+            "semester": "Spring 2024",
+            "earned": 10,
+            "completed": 41
+        },
+        {
+            "id": 4,
+            "semester": "Fall 2023",
+            "earned": 10,
+            "completed": 31
+        }
+    ],
+    "housing": [
+        {
+            "id": 1,
+            "building": "King Edward House",
+            "from": "08/20/2024",
+            "to": "05/15/2025"
+        },
+        {
+            "id": 2,
+            "building": "Queen Victoria Hall",
+            "from": "08/20/2023",
+            "to": "05/15/2024"
+        },
+        {
+            "id": 3,
+            "building": "King Henry Tower",
+            "from": "08/20/2022",
+            "to": "05/15/2023"
+        }
+    ],
+    "majorChangeHistory": [
+        {
+            "id": 1,
+            "major": "Criminal Justice (BS)",
+            "semester": "Spring 2023"
+        },
+        {
+            "id": 2,
+            "major": "Mechanical Engineering",
+            "semester": "Fall 2022"
+        }
+    ]
+}

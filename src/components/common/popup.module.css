@@ -1,0 +1,40 @@
+.infinize__dialogBox {
+    border-radius: 16px !important;
+}
+.infinize__dialogBoxHeading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+}
+.infinize__dialogBoxContent {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.infinize__dialogBoxText {
+    color: #656565;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+.infinize__dialogBoxActions {
+    padding: 0 !important;
+    align-self: flex-end !important;
+}
+.infinize__dialogBoxActions button {
+    padding: 10px 40px !important;
+    text-transform: none !important;
+    border-radius: 7px !important;
+    box-shadow: 0px 0px 4px 0px #1c71b5;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+.infinize__dialogBoxInput {
+    min-width: 500px !important;
+    font-size: 16px !important;
+    color: #4a585f !important;
+}

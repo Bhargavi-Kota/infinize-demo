@@ -1,0 +1,289 @@
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Take up full viewport height */
+}
+
+main {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 32px;
+    margin-top: 64px; /* Ensure content doesn't overlap the AppBar */
+}
+
+header {
+    background-color: white !important;
+    color: black !important;
+    padding: 0 0 0 1rem;
+    height: 65px;
+    z-index: 1299 !important;
+}
+
+footer {
+    background-color: #1976d2;
+    color: white;
+    padding: 16px;
+    margin-top: auto;
+    text-align: center;
+    position: relative;
+    z-index: 1299; /* Ensure footer is above drawer */
+}
+
+iconify-icon {
+    /* display: inline-block; its effeting on alingments  */
+    /* display: flex;
+    width: 26px;
+    height: 26px; because of these styles im getting the extra spaces in the recommendations card list*/
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1c71b5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e8e8e8;
+}
+.infinize__chip {
+    background-color: #d6eaf9 !important;
+    padding: 15px 5px !important;
+    border: none !important;
+    gap: 2px;
+    color: #4a585f !important;
+}
+.infinize__recommendationsCard {
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    position: relative;
+    background-color: #fff;
+}
+
+.infinize__recommendationsCard h4 {
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: #fff;
+    padding: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 250px;
+}
+.infinize__recommendationsCard p {
+    /* display: flex;
+    align-items: center;
+    gap: 5px; */
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.infinize__IconOuter {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #c7e3f9;
+    border: 8px solid #daeefe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* To avoid the default pading off dateFied */
+.mui-nby9nv-MuiStack-root {
+    padding: 0 !important;
+    flex-shrink: 0;
+}
+.infinize__IconOuterSmall {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #c7e3f9;
+    border: 3px solid #daeefe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+/* input field border color */
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: #d8e6ec !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #d8e6ec !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #d8e6ec !important;
+}
+
+/* default border */
+.border {
+    border: 1px solid #d8e6ec;
+    border-radius: 4px;
+}
+
+.noPlan {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.noPlan h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 40px 0 10px;
+}
+.noPlan p {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+.noPlanButton {
+    margin-top: 35px !important;
+    border-radius: 7px !important;
+    background-color: #1c71b5 !important;
+    box-shadow: 0px 0px 4px 0px #1c71b5;
+    color: #fff !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    padding: 10px 50px !important;
+}
+
+.widgetCard {
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid #ebf2fd;
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.widgetCard #eyeIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.widgetCard .nudgeIcon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #e9eff3;
+}
+.widgetCard h4 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    display: inline-block;
+}
+.widgetCard #date {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 400;
+}
+.widgetCard p {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 145%;
+}
+.widgetCard .actionButton {
+    text-transform: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 20px !important;
+    display: flex;
+    align-items: center;
+}
+.widgetCardNotes {
+    width: 100%;
+}
+.widgetCardNotes hr {
+    height: 2px;
+    border: 0;
+    background-color: #ebf2fd;
+    margin: 0 -20px 0px !important;
+}
+.widgetCard h5 {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+.widgetCard h5 span {
+    font-weight: 400;
+}
+
+.menuItem {
+    background-color: white !important;
+    font-size: 16px !important;
+    color: #5a6876 !important;
+    padding: 12px 20px !important;
+    display: flex;
+    gap: 15px !important;
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.menuItem:hover {
+    background-color: #f0f0f0 !important;
+}
+
+.noPlan {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.noPlan h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 40px 0 10px;
+}
+.noPlan p {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+.noPlanButton {
+    margin-top: 35px !important;
+    border-radius: 7px !important;
+    background-color: #1c71b5 !important;
+    box-shadow: 0px 0px 4px 0px #1c71b5;
+    color: #fff !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    padding: 10px 50px !important;
+}
+
+/* to avoide tha scroll bar ariea label error */
+.MuiDataGrid-scrollbar {
+    inert: true;
+}

@@ -1,0 +1,61 @@
+{
+    "courses": [
+        {
+            "courseTitle": "Calculus I",
+            "subject": "Mathematics",
+            "courseNumber": 101
+        },
+        {
+            "courseTitle": "Physics II",
+            "subject": "Physics",
+            "courseNumber": 202
+        },
+        {
+            "courseTitle": "World History",
+            "subject": "History",
+            "courseNumber": 303
+        },
+        {
+            "courseTitle": "Organic Chemistry",
+            "subject": "Chemistry",
+            "courseNumber": 404
+        },
+        {
+            "courseTitle": "Thermodynamics",
+            "subject": "Mechanical Engineering",
+            "courseNumber": 310
+        },
+        {
+            "courseTitle": "Data Structures",
+            "subject": "Computer Science",
+            "courseNumber": 450
+        }
+    ],
+    "substituteCourses": [
+        {
+            "courseTitle": "Genetics",
+            "subject": "Biology",
+            "courseNumber": 505
+        },
+        {
+            "courseTitle": "Algorithms",
+            "subject": "Computer Science",
+            "courseNumber": 606
+        },
+        {
+            "courseTitle": "Differential Equations",
+            "subject": "Mathematics",
+            "courseNumber": 301
+        },
+        {
+            "courseTitle": "Electromagnetism",
+            "subject": "Physics",
+            "courseNumber": 410
+        },
+        {
+            "courseTitle": "Inorganic Chemistry",
+            "subject": "Chemistry",
+            "courseNumber": 420
+        }
+    ]
+}

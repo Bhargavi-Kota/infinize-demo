@@ -1,0 +1,29 @@
+{
+    "test": [
+        {
+            "courseTitle": "GMAT Quantitative Score",
+            "subject": "Quantitative Analysis",
+            "courseNumber": 310
+        },
+        {
+            "courseTitle": "GMAT Total Converted Score",
+            "subject": "Business Analytics",
+            "courseNumber": 450
+        },
+        {
+            "courseTitle": "TOEFL",
+            "subject": "English Language Proficiency",
+            "courseNumber": 101
+        },
+        {
+            "courseTitle": "GRE Verbal Reasoning",
+            "subject": "Linguistics",
+            "courseNumber": 215
+        },
+        {
+            "courseTitle": "SAT Mathematics",
+            "subject": "Applied Mathematics",
+            "courseNumber": 320
+        }
+    ]
+}

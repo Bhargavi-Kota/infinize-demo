@@ -1,0 +1,9 @@
+export {default as CourseRequirements} from './courseRequirements';
+export {default as AreaOfStudy} from './areaOfStudy';
+export {default as AssignedTo} from './assignedTo';
+export {default as CourseData} from './courseData';
+export {default as Performance} from './performance';
+export {default as RegistrationHistory} from './registrationHistory';
+export {default as StudentInfo} from './studentInfo';
+export {default as SystemActivity} from './systemActivity';
+export {default as TestScore} from './testScore';

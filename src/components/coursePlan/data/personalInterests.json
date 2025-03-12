@@ -1,0 +1,25 @@
+{
+    "clubs": [
+        "AI and Robotics Society",
+        "Communication and Debate Society",
+        "Entrepreneurship Club",
+        "Photography Club",
+        "Programming Club",
+        "UX Design Club"
+    ],
+    "hobbies": [
+        "Creative Writing",
+        "Graphic Design",
+        "Gaming",
+        "Photography",
+        "Programming",
+        "Public Speaking",
+        "Traveling"
+    ],
+    "studyAbroad": [
+        "Yes",
+        "No",
+        "Maybe",
+        "Considering Short-term Exchange Programs"
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "coursePlans": [
+        {
+            "id": 1,
+            "name": "CRJ",
+            "totalCredits": 43,
+            "terms": [
+                {
+                    "term": "Summer 2025",
+                    "termCredits": 6,
+                    "minimumTermCredits": 8,
+                    "courses": [
+                        {
+                            "name": "CRJS 203 Upper-level Law Component ",
+                            "credits": 2,
+                            "description": " Examination of legal principles, case law, and judicial processes in the criminal justice system."
+                        },
+                        {
+                            "name": "CRJS 426W Criminological Theory",
+                            "credits": 2,
+                            "description": " Focuses on research, analysis, and professional writing skills specific to criminal justice fields"
+                        },
+                        {
+                            "name": "CRJS 326 Upper-Division General Education..",
+                            "credits": 2,
+                            "description": "Explores interdisciplinary perspectives on social issues, ethics, and policy impacts. "
+                        }
+                    ]
+                },
+                {
+                    "term": "Fall 2025",
+                    "termCredits": 12,
+                    "minimumTermCredits": 10,
+                    "courses": [
+                        {
+                            "name": "CRJ 478 Introduction to Philosophy ",
+                            "credits": 3,
+                            "description": "Introduction to Philosophy and Ethics explore fundamental questions about existence."
+                        },
+                        {
+                            "name": "CRJ 182 Criminological Theory ",
+                            "credits": 3,
+                            "description": "An in-depth study of the major theoretical issues in criminology.  "
+                        },
+                        {
+                            "name": "CRJ 436 Capstone Research Project",
+                            "credits": 3,
+                            "description": "Students work in groups to plan, design, and carry out a research project."
+                        },
+                        {
+                            "name": "CRJ 332  Criminal Justice System",
+                            "credits": 3,
+                            "description": "The course covers both substantive and procedural law related to the definitions."
+                        }
+                    ]
+                },
+                {
+                    "term": "Spring 2026",
+                    "termCredits": 12,
+                    "minimumTermCredits": 6,
+                    "courses": [
+                        {
+                            "name": "CRJ 398 Impact of Technology ",
+                            "credits": 3,
+                            "description": "Examines how technology influences society industries, ethics, and human interactions."
+                        },
+                        {
+                            "name": "CRJ 459 Social Research Methods",
+                            "credits": 3,
+                            "description": "An overview of the scientific approach to the study of social phenomena through quantitative."
+                        },
+                        {
+                            "name": "CRJS 30 Level Elective",
+                            "credits": 3,
+                            "description": "Explores the intersection of criminal justice and sociology,"
+                        },
+                        {
+                            "name": "CRJ 239 Interpreting the Past ",
+                            "credits": 3,
+                            "description": "Examines historical events, perspectives, and their influence on society."
+                        }
+                    ]
+                },
+                {
+                    "term": "Fall 2026",
+                    "termCredits": 13,
+                    "minimumTermCredits": 8,
+                    "courses": [
+                        {
+                            "name": "CRJS 320 Law and Social Control",
+                            "credits": 3,
+                            "description": "Examines legal frameworks shaping social behavior and institutional policies."
+                        },
+                        {
+                            "name": "CRJS 406 Cyber Law",
+                            "credits": 3,
+                            "description": "Focuses on legal challenges related to cybercrime and digital security."
+                        },
+                        {
+                            "name": "SOC 320 Social Inequality",
+                            "credits": 3,
+                            "description": "Explores systemic disparities in wealth, education, and social mobility."
+                        },
+                        {
+                            "name": "CRJS 310 Cybercriminology Foundations",
+                            "credits": 3,
+                            "description": "Introduces cybercrime trends, investigative methods, and prevention strategies."
+                        },
+                        {
+                            "name": "CRJS 368 Internship in Criminal Justice",
+                            "credits": 1,
+                            "description": "Hands-on experience in criminal justice organizations and legal institutions."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
