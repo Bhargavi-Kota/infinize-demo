@@ -111,27 +111,30 @@ export default function CareerMatches() {
                     <LoaderDialog open={loading} />
                 </Box>
             )}
-            {mounted ? (
-                isLoading ? (
-                    // Show Skeleton loader while loading
-                    <Skeleton variant="rectangular" width="100%" height={300} />
-                ) : (
-                    <Widget
-                        expanded={expanded.careerMatches}
-                        onChange={handleAccordionChange('careerMatches')}
-                        title="Career Recommendations"
-                        button={
-                            showNoPlan
-                                ? null
-                                : viewData
-                                ? {
-                                      type: 'career',
-                                      onViewAll: handleViewAll,
-                                      onCreate: handleAddCareer
-                                  }
-                                : {type: 'career', onCreate: handleAddCareer}
-                        }
-                    >
+            {mounted && (
+                <Widget
+                    expanded={expanded.careerMatches}
+                    onChange={handleAccordionChange('careerMatches')}
+                    title="Career Recommendations"
+                    button={
+                        showNoPlan
+                            ? null
+                            : viewData
+                            ? {
+                                  type: 'career',
+                                  onViewAll: handleViewAll,
+                                  onCreate: handleAddCareer
+                              }
+                            : {type: 'career', onCreate: handleAddCareer}
+                    }
+                >
+                    {isLoading ? (
+                        <Skeleton
+                            variant="rectangular"
+                            width="100%"
+                            height={300}
+                        />
+                    ) : (
                         <Box>
                             {!showNoPlan ? (
                                 <CareerRecomendations />
@@ -144,17 +147,17 @@ export default function CareerMatches() {
                                 />
                             )}
                         </Box>
-                        <CareerDialog
-                            resumeFile={resumeFile}
-                            open={isOpen}
-                            onClose={handleCloseModal}
-                            handleResumeUpload={handleResumeUpload}
-                            Continue={OnContinue}
-                            OnSkip={OnSkip}
-                        />
-                    </Widget>
-                )
-            ) : null}
+                    )}
+                    <CareerDialog
+                        resumeFile={resumeFile}
+                        open={isOpen}
+                        onClose={handleCloseModal}
+                        handleResumeUpload={handleResumeUpload}
+                        Continue={OnContinue}
+                        OnSkip={OnSkip}
+                    />
+                </Widget>
+            )}
         </Box>
     );
 }

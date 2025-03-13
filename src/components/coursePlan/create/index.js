@@ -6,27 +6,31 @@ import CoursePlanForm from './coursePlanForm';
 import {FormProvider} from '../../common/form/formProvider.js';
 import CoursePlanRecommendations from '../coursePlanRecommendations';
 import LoaderDialog from '@/components/common/loaderDialog';
+import MarkdownViewer from '../MarkdownViewer/markdownViewer';
 
 export default function CreateCourseplan({onCreate}) {
     const [showRecommendations, setShowRecommendations] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [showAiRecommendations, setShowAiRecommendations] = useState(false);
 
     const handleShowRecommendations = () => {
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
-            setShowRecommendations(true);
+            setShowAiRecommendations(true);
         }, 1500);
     };
+
     useEffect(() => {
-        if (showRecommendations) {
+        if (showAiRecommendations) {
             window.scrollTo(0, 0);
         }
-    }, [showRecommendations]);
+    }, [showAiRecommendations]);
 
-    return showRecommendations ? (
-        <CoursePlanRecommendations />
+    return showAiRecommendations ? (
+        <MarkdownViewer />
     ) : (
+        // <CoursePlanRecommendations />
         <Box className={classes.infinize__createCoursePlan__container}>
             {loading && (
                 <Box display="flex" justifyContent="center" alignItems="center">

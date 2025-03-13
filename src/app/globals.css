@@ -116,7 +116,7 @@ iconify-icon {
     justify-content: center;
     flex-shrink: 0;
 }
-/* input field border color */
+/* input field color css*/
 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
     border-color: #d8e6ec !important;
 }

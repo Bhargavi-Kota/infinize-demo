@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import BaseTextareaAutosize from '@mui/material/TextareaAutosize';
 import {FormControl, Box, Typography} from '@mui/material';
 import classes from './formFields.module.css';
-import {styled} from '@mui/system';
+import {padding, styled} from '@mui/system';
 
 const TextareaAutosize = styled(BaseTextareaAutosize)(
     ({theme}) => `font-family:${theme.typography.fontFamily}`
@@ -13,7 +13,8 @@ export function LimitedTextArea({
     name,
     label,
     value,
-    onChange
+    onChange,
+    placeholder = 'Enter'
 }) {
     const [wordCount, setWordCount] = useState(0);
 
@@ -40,7 +41,7 @@ export function LimitedTextArea({
                     id={name}
                     name={name}
                     aria-label={label}
-                    placeholder={'Enter'}
+                    placeholder={placeholder}
                     fontFamily={'Poppins'}
                 />
                 <Typography

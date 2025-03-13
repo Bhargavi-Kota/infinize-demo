@@ -183,7 +183,7 @@ export default function WidgetCard({
                                 style={{color: '#5A6876'}}
                             />
                         </ListItemIcon>
-                        Sent Kudos
+                        Send Kudos
                     </MenuItem>
                 )}
                 <MenuItem

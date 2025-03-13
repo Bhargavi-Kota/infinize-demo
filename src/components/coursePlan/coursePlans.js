@@ -16,6 +16,7 @@ import classes from './coursePlan.module.css';
 import {InfinizeIcon} from '../common';
 import CoursePlanLanding from './coursePlanCard/landing';
 import Recommendations from './recommendations';
+import RationaleDialog from './coursePlanCard/rationaleDialog';
 
 function TabPanel({children, value, index}) {
     return (
@@ -29,6 +30,7 @@ export default function CoursePlanPage() {
     const theme = useTheme();
     const [selectedTab, setSelectedTab] = useState(0);
     const [popupOpen, setPopupOpen] = useState(false);
+    const [rationaleOpen, setRationlaeOpen] = useState(false);
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
     };
@@ -84,6 +86,13 @@ export default function CoursePlanPage() {
                                 <Link
                                     href="#"
                                     style={{color: theme.palette.primary.main}}
+                                    onClick={() => setRationlaeOpen(true)}
+                                >
+                                    View Rationale
+                                </Link>
+                                <Link
+                                    href="#"
+                                    style={{color: theme.palette.primary.main}}
                                     onClick={e => {
                                         e.preventDefault();
                                         setPopupOpen(true);
@@ -134,6 +143,10 @@ export default function CoursePlanPage() {
                     customStyles={{width: '100%', height: '500px'}}
                 />
             </Dialog>
+            <RationaleDialog
+                open={rationaleOpen}
+                onClose={() => setRationlaeOpen(false)}
+            />
         </Box>
     );
 }

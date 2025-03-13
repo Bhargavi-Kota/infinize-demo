@@ -8,7 +8,8 @@ import {
     IconButton,
     Dialog,
     DialogTitle,
-    Button
+    Button,
+    Skeleton
 } from '@mui/material';
 import {InfinizeIcon} from '../../common';
 import CoursePlanData from '@/data/coursePlan/coursePlan.json';
@@ -21,7 +22,12 @@ import {useRouter, useParams} from 'next/navigation';
 import CoursePlanDialogs from './dailogs';
 import Recommendations from '../recommendations';
 import LoaderDialog from '@/components/common/loaderDialog';
-export default function CoursePlanCard({isEditable = false, onPlanCount}) {
+import RationaleDialog from './rationaleDialog';
+export default function CoursePlanCard({
+    isEditable = false,
+    onPlanCount,
+    loader
+}) {
     const {studentId} = useParams();
     const theme = useTheme();
     const router = useRouter();
@@ -36,7 +42,7 @@ export default function CoursePlanCard({isEditable = false, onPlanCount}) {
     const [showLimitPopup, setShowLimitPopup] = useState(false);
     const [inputValue, setInputValue] = useState('');
     const [loading, setLoading] = useState(false);
-
+    const [rationaleOpen, setRationlaeOpen] = useState(false);
     useEffect(() => {
         setCoursePlan(CoursePlanData.coursePlans);
         const initialExpanded = {};
@@ -146,168 +152,228 @@ export default function CoursePlanCard({isEditable = false, onPlanCount}) {
     };
 
     return (
-        <Box className={classes.infinize__coursePlanCards}>
-            {(isEditable ? coursePlan.slice(0, 1) : coursePlan).map(plan => (
-                <Box
-                    key={plan.id}
-                    className={classes.infinize__coursePlanCardWithButtons}
-                >
-                    <Box className={classes.infinize__coursePlanCard}>
-                        <Stack
-                            direction="row"
-                            className={classes.infinize__coursePlanCardMenuIcon}
-                        >
-                            {isEditable ? (
-                                <IconButton onClick={handleReset}>
-                                    <InfinizeIcon
-                                        icon="ic:round-reset-tv"
-                                        style={{
-                                            color: '#A3A3A3',
-                                            cursor: 'pointer'
-                                        }}
-                                    />
-                                </IconButton>
-                            ) : (
-                                <Link
-                                    href="#"
-                                    style={{color: theme.palette.primary.main}}
-                                    onClick={e => {
-                                        e.preventDefault();
-                                        setPopupOpen(true);
-                                    }}
-                                >
-                                    Additional Recommendations
-                                </Link>
-                            )}
-                            <IconButton
-                                onClick={event =>
-                                    handleMenuOpen(event, plan.id)
+        <>
+            {loader ? (
+                <Box width="100%" maxWidth="900px" minWidth="700px">
+                    <Skeleton variant="rectangular" width="100%" height={150} />
+                    <Box mt={2} />
+                    <Skeleton variant="text" width="80%" />
+                    <Skeleton variant="text" width="60%" />
+                    <Box mt={2} />
+                    <Skeleton variant="rectangular" width="100%" height={250} />
+                    <Box mt={2} />
+                    <Skeleton variant="rectangular" width="100%" height={250} />
+                </Box>
+            ) : (
+                <Box className={classes.infinize__coursePlanCards}>
+                    {(isEditable ? coursePlan.slice(0, 1) : coursePlan).map(
+                        plan => (
+                            <Box
+                                key={plan.id}
+                                className={
+                                    classes.infinize__coursePlanCardWithButtons
                                 }
                             >
-                                <InfinizeIcon
-                                    icon="mi:options-vertical"
-                                    style={{
-                                        color: '#A3A3A3',
-                                        cursor: 'pointer'
-                                    }}
-                                />
-                            </IconButton>
-                        </Stack>
-                        <Box className="infinize__IconOuter">
-                            <InfinizeIcon
-                                icon="fluent:hat-graduation-sparkle-24-filled"
-                                style={{color: theme.palette.primary.main}}
-                            />
-                        </Box>
+                                <Box
+                                    className={classes.infinize__coursePlanCard}
+                                >
+                                    <Stack
+                                        direction="row"
+                                        alignItems="center"
+                                        spacing={1}
+                                        className={
+                                            classes.infinize__coursePlanCardMenuIcon
+                                        }
+                                    >
+                                        <Link
+                                            href="#"
+                                            style={{
+                                                color: '#A5A5A5'
+                                            }}
+                                            onClick={e => {
+                                                e.preventDefault();
+                                                setRationlaeOpen(true);
+                                            }}
+                                        >
+                                            View Rationale
+                                        </Link>
+                                        {isEditable ? (
+                                            <IconButton onClick={handleReset}>
+                                                <InfinizeIcon
+                                                    icon="ic:round-reset-tv"
+                                                    style={{
+                                                        color: '#A3A3A3',
+                                                        cursor: 'pointer'
+                                                    }}
+                                                />
+                                            </IconButton>
+                                        ) : (
+                                            <Link
+                                                href="#"
+                                                style={{
+                                                    color: theme.palette.primary
+                                                        .main
+                                                }}
+                                                onClick={e => {
+                                                    e.preventDefault();
+                                                    setPopupOpen(true);
+                                                }}
+                                            >
+                                                Additional Recommendations
+                                            </Link>
+                                        )}
+                                        <IconButton
+                                            onClick={event =>
+                                                handleMenuOpen(event, plan.id)
+                                            }
+                                        >
+                                            <InfinizeIcon
+                                                icon="mi:options-vertical"
+                                                style={{
+                                                    color: '#A3A3A3',
+                                                    cursor: 'pointer'
+                                                }}
+                                            />
+                                        </IconButton>
+                                    </Stack>
+                                    <Box className="infinize__IconOuter">
+                                        <InfinizeIcon
+                                            icon="fluent:hat-graduation-sparkle-24-filled"
+                                            style={{
+                                                color: theme.palette.primary
+                                                    .main
+                                            }}
+                                        />
+                                    </Box>
 
-                        <Typography variant="h2" color="primary">
-                            Plan
-                        </Typography>
-                        <Typography
-                            variant="body1"
-                            className={classes.infinize__coursePlanTotalCredits}
-                        >
-                            Total Credits: {plan.totalCredits}
-                        </Typography>
+                                    <Typography variant="h2" color="primary">
+                                        Plan
+                                    </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        className={
+                                            classes.infinize__coursePlanTotalCredits
+                                        }
+                                    >
+                                        Total Credits: {plan.totalCredits}
+                                    </Typography>
 
-                        {plan.terms.map((term, termIndex) => (
-                            <CoursePlanAccordion
-                                key={termIndex}
-                                planIndex={plan.id}
-                                term={term}
-                                termIndex={termIndex}
-                                expanded={expanded}
-                                toggleAccordion={toggleAccordion}
-                                isEditable={isEditable}
-                                allTerms={plan.terms.map(t => t.term)}
-                            />
-                        ))}
-                    </Box>
-                    {isEditable ? (
-                        <Box
-                            className={classes.infinize__coursePlanCardButtons}
-                        >
-                            <Button
-                                style={{
-                                    background: theme.palette.primary.main,
-                                    color: '#fff'
-                                }}
-                                onClick={handleSave}
-                            >
-                                Save
-                            </Button>
+                                    {plan.terms.map((term, termIndex) => (
+                                        <CoursePlanAccordion
+                                            key={termIndex}
+                                            planIndex={plan.id}
+                                            term={term}
+                                            termIndex={termIndex}
+                                            expanded={expanded}
+                                            toggleAccordion={toggleAccordion}
+                                            isEditable={isEditable}
+                                            allTerms={plan.terms.map(
+                                                t => t.term
+                                            )}
+                                        />
+                                    ))}
+                                </Box>
+                                {isEditable ? (
+                                    <Box
+                                        className={
+                                            classes.infinize__coursePlanCardButtons
+                                        }
+                                    >
+                                        <Button
+                                            style={{
+                                                background:
+                                                    theme.palette.primary.main,
+                                                color: '#fff'
+                                            }}
+                                            onClick={handleSave}
+                                        >
+                                            Save
+                                        </Button>
 
-                            <Button
-                                style={{
-                                    border: `2px solid ${theme.palette.primary.main}`,
-                                    boxShadow: `0px 0px 5px 0px ${theme.palette.primary.main}`,
-                                    textTransform: 'none'
-                                }}
-                                onClick={handleCancel}
-                            >
-                                Cancel
-                            </Button>
-                        </Box>
-                    ) : (
-                        ' '
+                                        <Button
+                                            style={{
+                                                border: `2px solid ${theme.palette.primary.main}`,
+                                                boxShadow: `0px 0px 5px 0px ${theme.palette.primary.main}`,
+                                                textTransform: 'none'
+                                            }}
+                                            onClick={handleCancel}
+                                        >
+                                            Cancel
+                                        </Button>
+                                    </Box>
+                                ) : (
+                                    ' '
+                                )}
+                            </Box>
+                        )
                     )}
-                </Box>
-            ))}
 
-            <Dialog
-                open={popupOpen}
-                onClose={() => setPopupOpen(false)}
-                fullWidth
-                maxWidth="sm"
-                sx={{
-                    '& .MuiDialog-paper': {
-                        borderRadius: '12px',
-                        padding: '50px 20px 20px'
-                    }
-                }}
-            >
-                <IconButton
-                    onClick={() => setPopupOpen(false)}
-                    sx={{position: 'absolute', right: 8, top: 8}}
-                >
-                    <InfinizeIcon icon="mdi:close" />
-                </IconButton>
-                <Recommendations
-                    customStyles={{width: '100%', height: '500px'}}
-                />
-            </Dialog>
+                    <Dialog
+                        open={popupOpen}
+                        onClose={() => setPopupOpen(false)}
+                        fullWidth
+                        maxWidth="sm"
+                        sx={{
+                            '& .MuiDialog-paper': {
+                                borderRadius: '12px',
+                                padding: '50px 20px 20px'
+                            }
+                        }}
+                    >
+                        <IconButton
+                            onClick={() => setPopupOpen(false)}
+                            sx={{position: 'absolute', right: 8, top: 8}}
+                        >
+                            <InfinizeIcon icon="mdi:close" />
+                        </IconButton>
+                        <Recommendations
+                            customStyles={{width: '100%', height: '500px'}}
+                        />
+                    </Dialog>
 
-            <CoursePlanMenu
-                anchorEl={anchorEl}
-                handleMenuClose={handleMenuClose}
-                expandAll={expandAll}
-                collapseAll={collapseAll}
-                handleRegenerate={handleRegenerate}
-                handleDelete={() => handleDeleteConfirm(selectedPlanIndex)}
-                isEditable={isEditable}
-            />
+                    <CoursePlanMenu
+                        anchorEl={anchorEl}
+                        handleMenuClose={handleMenuClose}
+                        expandAll={expandAll}
+                        collapseAll={collapseAll}
+                        handleRegenerate={handleRegenerate}
+                        handleDelete={() =>
+                            handleDeleteConfirm(selectedPlanIndex)
+                        }
+                        isEditable={isEditable}
+                    />
 
-            {loading && (
-                <Box display="flex" justifyContent="center" alignItems="center">
-                    <LoaderDialog open={loading} />
+                    {loading && (
+                        <Box
+                            display="flex"
+                            justifyContent="center"
+                            alignItems="center"
+                        >
+                            <LoaderDialog open={loading} />
+                        </Box>
+                    )}
+                    <CoursePlanDialogs
+                        confirmDeleteOpen={confirmDeleteOpen}
+                        setConfirmDeleteOpen={setConfirmDeleteOpen}
+                        handleDelete={handleDelete}
+                        resetPopup={resetPopup}
+                        setResetPopup={setResetPopup}
+                        handleResetPopup={() => setResetPopup(false)}
+                        savePopup={savePopup}
+                        setSavePopup={setSavePopup}
+                        inputValue={inputValue}
+                        setInputValue={setInputValue}
+                        handleSavePopup={handleSavePopup}
+                        showLimitPopup={showLimitPopup}
+                        setShowLimitPopup={setShowLimitPopup}
+                        handleContinue={handleContinue}
+                    />
+                    <RationaleDialog
+                        open={rationaleOpen}
+                        onClose={() => setRationlaeOpen(false)}
+                    />
                 </Box>
             )}
-            <CoursePlanDialogs
-                confirmDeleteOpen={confirmDeleteOpen}
-                setConfirmDeleteOpen={setConfirmDeleteOpen}
-                handleDelete={handleDelete}
-                resetPopup={resetPopup}
-                setResetPopup={setResetPopup}
-                handleResetPopup={() => setResetPopup(false)}
-                savePopup={savePopup}
-                setSavePopup={setSavePopup}
-                inputValue={inputValue}
-                setInputValue={setInputValue}
-                handleSavePopup={handleSavePopup}
-                showLimitPopup={showLimitPopup}
-                setShowLimitPopup={setShowLimitPopup}
-                handleContinue={handleContinue}
-            />
-        </Box>
+        </>
     );
 }

@@ -45,20 +45,24 @@ export default function CoursePlans({isLoading = true}) {
 
     return (
         <Box>
-            {mounted ? (
-                isLoading ? (
-                    <Skeleton variant="rectangular" width="100%" height={300} />
-                ) : (
-                    <Widget
-                        expanded={expanded.coursePlans}
-                        onChange={handleAccordionChange('coursePlans')}
-                        title="Course Plans"
-                        button={
-                            showNoPlan
-                                ? null
-                                : {type: 'course', onCreate: handleAddCourse}
-                        }
-                    >
+            {mounted && (
+                <Widget
+                    expanded={expanded.coursePlans}
+                    onChange={handleAccordionChange('coursePlans')}
+                    title="Course Plans"
+                    button={
+                        showNoPlan
+                            ? null
+                            : {type: 'course', onCreate: handleAddCourse}
+                    }
+                >
+                    {isLoading ? (
+                        <Skeleton
+                            variant="rectangular"
+                            width="100%"
+                            height={300}
+                        />
+                    ) : (
                         <Box>
                             {showNoPlan ? (
                                 <NoPlan
@@ -71,9 +75,9 @@ export default function CoursePlans({isLoading = true}) {
                                 <CoursePlanPage sx={{pt: 0}} />
                             )}
                         </Box>
-                    </Widget>
-                )
-            ) : null}
+                    )}
+                </Widget>
+            )}
         </Box>
     );
 }
