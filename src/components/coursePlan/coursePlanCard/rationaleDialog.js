@@ -62,10 +62,6 @@ export default function RationaleDialog({open, onClose}) {
                     </Typography>
                 )}
 
-                <Typography variant="h5" color="primary" mt={2}>
-                    Features
-                </Typography>
-
                 {rationaleData.features.map((feature, index) => (
                     <Box
                         key={index}
@@ -112,27 +108,6 @@ export default function RationaleDialog({open, onClose}) {
                         )}
                     </Box>
                 ))}
-
-                {/* Final Thought Section */}
-                {rationaleData.features.some(
-                    f => f.title === 'Final Thought'
-                ) && (
-                    <Box mt={3}>
-                        <Typography variant="h6">Final Thought</Typography>
-                        <Typography variant="body1">
-                            {rationaleData.features
-                                .find(f => f.title === 'Final Thought')
-                                ?.description.split('**')
-                                .map((part, idx) =>
-                                    idx % 2 === 1 ? (
-                                        <strong key={idx}>{part}</strong>
-                                    ) : (
-                                        part
-                                    )
-                                )}
-                        </Typography>
-                    </Box>
-                )}
             </DialogContent>
         </Dialog>
     );
